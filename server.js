@@ -113,7 +113,7 @@ app.post('/api/persons', (req,res) =>{
 })
 
 
-const PORT = 3001
-app.listen(PORT || process.env.PORT , () =>{
+// const PORT = 8000 
+app.listen( process.env.PORT || PORT, () =>{
     console.log(`Server running on port ${PORT}`)
 })
