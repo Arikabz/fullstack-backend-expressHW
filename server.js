@@ -63,7 +63,7 @@ function countPhonesDate(){
         <p>${new Date()}<p>`
 }
 
-app.get('/info',(req, res)=>{
+app.get('/',(req, res)=>{
     res.send(countPhonesDate())
 })
 
@@ -111,9 +111,9 @@ app.post('/api/persons', (req,res) =>{
     phones = phones.concat(phone)
     res.json(phone)
 })
+app.use(unknownEndpoint)
 
-
-// const PORT = 8000 
+const PORT = 8000 
 app.listen( process.env.PORT || PORT, () =>{
     console.log(`Server running on port ${PORT}`)
 })
